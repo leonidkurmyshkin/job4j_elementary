@@ -23,11 +23,11 @@ public class SkipNegativeTest {
     @Test
     public void skip2() {
         int[][] in = {
-                {1, -2, -5},
+                {1, -2, 5},
                 {-1, 2, 4}
         };
         int[][] expect = {
-                {1, 0, 0},
+                {1, 0, 5},
                 {0, 2, 4}
         };
         int[][] rsl = SkipNegative.skip(in);
