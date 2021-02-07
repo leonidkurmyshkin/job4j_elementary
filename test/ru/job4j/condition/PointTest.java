@@ -29,4 +29,11 @@ public class PointTest {
         double out = p1.distance(p2);
         Assert.assertEquals(20, out, 0.01);
     }
+
+    @Test
+    public void when0neg1010to0neg10neg10then20() {
+        Point p1 = new Point(0, -10, 10);
+        Point p2 = new Point(0, -10, -10);
+        Assert.assertEquals(20, p1.distance3d(p2), 0.01);
+    }
 }
